@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-coffee-50: #fdfaf7;
+  --color-coffee-100: #f6efe9;
+  --color-coffee-200: #eddcd0;
+  --color-coffee-300: #dec1ad;
+  --color-coffee-400: #ca9f84;
+  --color-coffee-500: #b07d62;
+  --color-coffee-600: #935d46;
+  --color-coffee-700: #6f4e37; /* Default Coffee Brown */
+  --color-coffee-800: #5c3f2d;
+  --color-coffee-900: #493325;
+}
+
+@utility bg-immersive-bg {
+  background-color: #050506;
+}
+
+@utility bg-immersive-card {
+  background-color: #0c0c0e;
+}
+
+@utility bg-immersive-nav {
+  background-color: #0a0a0c;
+}
+
+@utility border-immersive {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+@utility border-immersive-hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+@utility glow-indigo {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+}
+
+@utility glow-cyan {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.35);
+}
+
+@utility bg-cyber-gradient {
+  background-image: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+}
+
+@utility bg-immersive-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@utility bg-immersive-radial {
+  background-image: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 60%);
+}
+
+/* Custom scrollbar to keep layout clean */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Base resets */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-sans);
+}
+
+/* Immersive UI Dark Mode Theme mapping */
+.dark {
+  background-color: #050506 !important;
+  color: #cbd5e1 !important;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dark .bg-white,
+.dark [class*="bg-white/"] {
+  background-color: #0c0c0e !important;
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-50\/50,
+.dark .bg-gray-50\/20,
+.dark .bg-gray-50\/30,
+.dark .bg-zinc-900,
+.dark .bg-zinc-900\/50,
+.dark .bg-zinc-800\/10,
+.dark .bg-zinc-800\/20,
+.dark .bg-zinc-800\/40 {
+  background-color: #0a0a0c !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #16161a !important;
+}
+
+.dark .border-gray-50,
+.dark .border-gray-100,
+.dark .border-gray-150,
+.dark .border-gray-200,
+.dark .border-zinc-800,
+.dark .border-zinc-800\/40,
+.dark .border-zinc-800\/50,
+.dark .border-zinc-800\/60,
+.dark .border-zinc-900 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-gray-500 {
+  color: #64748b !important;
+}
+
+.dark .text-gray-400 {
+  color: #475569 !important;
+}
+
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5) !important;
+}
